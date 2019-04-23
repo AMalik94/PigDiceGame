@@ -22,7 +22,21 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     diceDOM.src ='dice-' + dice + '.png'
 
 
+// console.log(dice)
+        if (dice !== 1){
+            roundScore += dice;
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        }else{
+            activePlayer == 0 ? activePlayer = 1 : activePlayer = 0;
+            roundScore = 0;
+        }
 
-    
+  
 
-})
+});
+
+
+
+
+
+
